@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  <%- include('partials/head') %>
+
+  <title>Blog</title>
+
+</head>
+<body>
+  <%- include('partials/nav') %>
+   <div class="container">
+
+  <form action="/blog" method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Cover Image</label>
+      <input type="file" class="form-control" id="exampleInputEmail1" name="coverImageURL" aria-describedby="emailHelp">
+      
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Title</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" name="title" aria-describedby="emailHelp">
+        
+      </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Post</label>
+      <textarea class="form-control"  name="body"></textarea>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+    </div>
+
+    <%- include('partials/scripts') %>
+</body>
+</html>
